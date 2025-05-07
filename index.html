@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TickCare: An IoT-Integrated MCU-based Medicine Dispenser with Scheduled Dosing and Remote Caregiver Access</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<header>
+    <img src="Logo.png" alt="Logo">
+</header>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>Dose Index</th>
+                <th>Time To Take</th>
+                <th>Status</th>
+                <th>Time Taken</th>
+                <th>Alarm</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>08:00 AM</td>
+                <td>Taken</td>
+                <td>08:30 AM</td>
+                <td class="alarm-cell">
+                    <button disabled class="alarm-button alarm-off">Enable</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>12:00 PM</td>
+                <td>Not Taken </td>
+                <td>--:-- --</td>
+                <td class="alarm-cell">
+                    <button class="alarm-button alarm-on">Enable</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4:00 PM</td>
+                <td>Not Taken </td>
+                <td>--:-- --</td>
+                <td class="alarm-cell">
+                    <button disabled class="alarm-button alarm-off">Enable</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
