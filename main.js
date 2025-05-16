@@ -142,8 +142,6 @@ alarmButton.addEventListener("click", async () => {
   }
 });
 
-// Initial data fetch and ongoing polling every 5 seconds
-console.log(AIO_USERNAME);
-console.log(AIO_KEY);
+// Initial data fetch and ongoing polling every 1 second
 fetchData();
 setInterval(fetchData, 1000);
