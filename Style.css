@@ -65,18 +65,17 @@ td {
 }
 
 .alarm-cell {
-    display: flex;
-    gap: 0.5em;
-    flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid #ddd;
+    align-items: center;
+    height: 100%; /* Make the cell take full height */
 }
 
 .alarm-button {
     flex: 1; /* Allow buttons to grow */
     min-width: 100px; /* Minimum width for buttons */
-    padding: 0.5rem 1rem; /* Adjust padding */
-    height: 40px; /* Fixed height */
+    padding: 0.5rem; /* Adjust padding */
+    height: 100%; /* Make button fill the cell height */
+    width: 100%;
     border: none;
     border-radius: 20px;
     font-size: 1rem; /* Use rem for consistent scaling */
