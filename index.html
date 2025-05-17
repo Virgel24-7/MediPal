@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -9,49 +9,49 @@
     </title>
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png" />
     <link rel="stylesheet" href="Style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <img src="Logo.png" alt="Logo" />
+        <img src="Logo.png" alt="Logo" />
     </header>
 
     <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Dose Index</th>
-            <th>Time To Take</th>
-            <th>Status</th>
-            <th>Time Taken</th>
-            <th>Alarm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>08:00 AM</td>
-            <td>Taken</td>
-            <td>08:30 AM</td>
-            <td class="alarm-cell" rowspan="3">
-              <button class="alarm-button" id="alarmButton">Enable</button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>12:00 PM</td>
-            <td>Not Taken</td>
-            <td>--:-- --</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>4:00 PM</td>
-            <td>Not Taken</td>
-            <td>--:-- --</td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dose Index</th>
+                    <th>Time To Take</th>
+                    <th>Status</th>
+                    <th>Time Taken</th>
+                    <th>Alarm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-dose-index="1">----</td>
+                    <td data-time-to-take="1">----</td>
+                    <td data-status="1">----</td>
+                    <td data-time-taken="1">----</td>
+                    <td class="alarm-cell" rowspan="3">
+                        <button class="alarm-button" id="alarmButton" disabled>Disabled</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-dose-index="2">----</td>
+                    <td data-time-to-take="2">----</td>
+                    <td data-status="2">----</td>
+                    <td data-time-taken="2">----</td>
+                </tr>
+                <tr>
+                    <td data-dose-index="3">----</td>
+                    <td data-time-to-take="3">----</td>
+                    <td data-status="3">----</td>
+                    <td data-time-taken="3">----</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <script type="module" src="main.js"></script>
-  </body>
+</body>
 </html>
