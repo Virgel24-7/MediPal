@@ -120,12 +120,16 @@ async function updateDisplay() {
           row.querySelector(`[data-time-taken="${index + 1}"]`).textContent = "----"; // Indicate no dose
          });
     } else {
-        const [NumDoseSessionId, doseCount] = await fetchNumOfDose();
+        const [NumDoseSessionId, doseCounttemp] = await fetchNumOfDose();
+        let doseCount = doseCounttemp;
         if (NumDoseSessionId === currentSessionId) {
-          
+          if(doseCount == 0) {
+            doseCount = 3;
+          }
+
           const takeDoseArrayStr = await fetchTakeDoseTime();
           const setDoseArrayStr = await fetchSetDoseTime();
-          const keys = ["sessionid", "doseCount", "time"];
+          const keys = ["sessionid", "doseNum", "time"];
           const takeDoseArrayObj = takeDoseArrayStr.map((takeDose1) => {
             const values = takeDose1.split(" ");
             return Object.fromEntries(keys.map((k, i) => [k, values[i]]));
@@ -147,7 +151,7 @@ async function updateDisplay() {
           const tdfiltered = takeDoseArrayObj.filter((tda) => tda.sessionid == currentSessionId);
 
           if(sdfiltered.length > 0) {
-            const sdsorted = sdfiltered.sort((a, b) => parseInt(a.doseCount) - parseInt(b.doseCount));
+            const sdsorted = sdfiltered.sort((a, b) => parseInt(a.doseNum) - parseInt(b.doseNum));
 
             for(let  i = 0; i < sdsorted.length; i++) {
               SetDoseTime[i] = sdsorted[i].time;
@@ -155,7 +159,7 @@ async function updateDisplay() {
           }
 
           if(tdfiltered.length > 0) {
-          const tdsorted = tdfiltered.sort((a, b) => parseInt(a.doseCount) - parseInt(b.doseCount));
+          const tdsorted = tdfiltered.sort((a, b) => parseInt(a.doseNum) - parseInt(b.doseNum));
 
             for(let  i = 0; i < tdsorted.length; i++) {
               TakeDoseTime[i] = tdsorted[i].time;

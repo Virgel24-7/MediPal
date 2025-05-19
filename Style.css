@@ -72,7 +72,7 @@ td {
 
 .alarm-button {
     flex: 1; /* Allow buttons to grow */
-    min-width: 100px; /* Minimum width for buttons */
+    min-width: 50px; /* Minimum width for buttons */
     padding: 0.5rem; /* Adjust padding */
     height: 100%; /* Make button fill the cell height */
     width: 100%;
