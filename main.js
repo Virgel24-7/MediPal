@@ -206,7 +206,12 @@ function handleApiData(data) {
 
   const latestCommand = data[0];
   if (latestCommand.value === "PIC allow") {
-    enableButton();
+    const lastPICAllowTime = parseDateTime(latestCommand.created_at);
+    const now = new Date();
+    const diffSeconds = (now - (lastPICAllowTime)) / 1000;
+    if (diffSeconds >= 10) {
+      enableButton();
+    }
     return;
   } else if (latestCommand.value === "PIC deny") {
     disableButton();
@@ -217,9 +222,9 @@ function handleApiData(data) {
   if (latestIotAllow) {
     lastIotAllowTime = parseDateTime(latestIotAllow.created_at);
     const now = new Date();
-    const diffSeconds = (now - lastIotAllowTime) / 1000;
-    if (diffSeconds < 15) {
-      disableButtonWithTime(15 - diffSeconds);
+    const diffSeconds = (now - (lastIotAllowTime)) / 1000;
+    if (diffSeconds <= 20) {
+      disableButtonWithTime(22 - diffSeconds);
       return;
     } else {
       enableButton();
@@ -289,7 +294,7 @@ alarmButton.addEventListener("click", async () => {
   const success = await sendCommand("IOT allow");
   if (success) {
     lastIotAllowTime = new Date();
-    disableButtonForDuration(15);
+    disableButtonForDuration(20);
   }
 });
 
