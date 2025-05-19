@@ -1,127 +1,132 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
 header {
-    background-color: #FF5722; /* Orange color */
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #ff5722; /* Orange color */
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 header img {
-    min-width: 200px;
-    max-width: 300px;
-    height: auto;
-    margin-right: 10px;
-    vertical-align: middle;
+  min-width: 200px;
+  max-width: 300px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 header h1 {
-    display: inline;
-    font-size: 2em;
-    vertical-align: middle;
+  display: inline;
+  font-size: 2em;
+  vertical-align: middle;
 }
 
 main {
-    background-color: white;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
+table,
+th,
+td {
+  border: 1px solid #ddd;
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
+th,
+td {
+  padding: 12px;
+  text-align: left;
 }
 
 th {
-    background-color: #FF5722;
-    color: white;
+  background-color: #ff5722;
+  color: white;
 }
 
 td {
-    background-color: #fafafa;
+  background-color: #fafafa;
 }
 
 .alarm-cell {
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Make the cell take full height */
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make the cell take full height */
 }
 
 .alarm-button {
-    flex: 1; /* Allow buttons to grow */
-    min-width: 50px; /* Minimum width for buttons */
-    padding: 0.5rem; /* Adjust padding */
-    height: 100%; /* Make button fill the cell height */
-    width: 100%;
-    border: none;
-    border-radius: 20px;
-    font-size: 1rem; /* Use rem for consistent scaling */
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+  flex: 1; /* Allow buttons to grow */
+  min-width: 50px; /* Minimum width for buttons */
+  padding: 0.5rem; /* Adjust padding */
+  height: 100%; /* Make button fill the cell height */
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem; /* Use rem for consistent scaling */
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .alarm-on {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 .alarm-on:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .alarm-off {
-    background-color: #cccccc;
-    color: #666666;
+  background-color: #cccccc;
+  color: #666666;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    table, th, td {
-        font-size: 14px;
-    }
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
 
-    header h1 {
-        font-size: 1.5em;
-    }
+  header h1 {
+    font-size: 1.5em;
+  }
 
-    header img {
-        width: 40px;
-    }
+  header img {
+    width: 40px;
+  }
 
-    .alarm-button {
-        font-size: 0.9rem; /* Slightly smaller font on mobile */
-        padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
-    }
+  .alarm-button {
+    font-size: 0.9rem; /* Slightly smaller font on mobile */
+    padding: 0.4rem 0.8rem; /* Adjust padding for smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .alarm-button {
-        font-size: 0.8rem; /* Even smaller font on very small screens */
-        padding: 0.3rem 0.6rem; /* Adjust padding for very small screens */
-    }
+  .alarm-button {
+    font-size: 0.8rem; /* Even smaller font on very small screens */
+    padding: 0.3rem 0.6rem; /* Adjust padding for very small screens */
+  }
 }
